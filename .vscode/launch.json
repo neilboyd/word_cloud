@@ -11,10 +11,14 @@
             "program": "wordcloud",
             "console": "integratedTerminal",
             "args": [
-                "--text tmp/debug.txt",
-                "--random_state 1",
-                "--imagefile 1.png",
-                "--colormap Greens"
+                "--text",
+                "examples/constitution.txt",
+                "--random_state",
+                "1",
+                "--imagefile",
+                "Greens.png",
+                "--colormap",
+                "Greens"
             ]
         }
     ]
