@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -11,10 +8,14 @@
             "program": "wordcloud",
             "console": "integratedTerminal",
             "args": [
-                "--text tmp/debug.txt",
-                "--random_state 1",
-                "--imagefile 1.png",
-                "--colormap Greens"
+                "--text",
+                "examples/constitution.txt",
+                "--random_state",
+                "1",
+                "--imagefile",
+                "1.png",
+                "--colormap",
+                "Greens"
             ]
         }
     ]
