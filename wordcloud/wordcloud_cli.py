@@ -244,7 +244,7 @@ def parse_args(arguments):
 
     colormap = args.pop('colormap')
     if colormap:
-        color_func = None
+        color_func = wc.colormap_color_func(colormap)
     else:
         color_func = wc.random_color_func
 
