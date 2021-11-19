@@ -243,13 +243,9 @@ def parse_args(arguments):
         args['mask'] = np.array(Image.open(mask))
 
     colormap = args.pop('colormap')
-    if colormap:
-        color_func = wc.colormap_color_func(colormap)
-    else:
-        color_func = wc.random_color_func
-
     colormask = args.pop('colormask')
     color = args.pop('color')
+    color_func = wc.colormap_color_func(colormap) if colormap else wc.random_color_func
     if colormask:
         image = np.array(Image.open(colormask))
         color_func = wc.ImageColorGenerator(image)
