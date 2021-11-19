@@ -20,7 +20,7 @@ python --version
 ### Install all dependencies
 
 ```
-pip3 install -U -r requirements.txt -r requirements-dev.txt
+pip install -U -r requirements.txt -r requirements-dev.txt
 ```
 
 ### Ensure that files are correctly formatted
@@ -32,7 +32,7 @@ flake8
 ### Ensure that tests pass
 
 ```
-pip3 install -e .
+pip install -e .
 pytest
 ```
 
