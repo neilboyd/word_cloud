@@ -27,6 +27,7 @@ from PIL import Image
 
 from . import __version__
 
+
 class FileType(object):
     """Factory for creating file object types.
 
