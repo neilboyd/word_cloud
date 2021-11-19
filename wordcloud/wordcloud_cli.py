@@ -25,8 +25,7 @@ import wordcloud as wc
 import numpy as np
 from PIL import Image
 
-from _version import get_versions
-__version__ = get_versions()['version']
+from . import __version__
 
 class FileType(object):
     """Factory for creating file object types.
@@ -242,10 +241,9 @@ def parse_args(arguments):
         mask = args.pop('mask')
         args['mask'] = np.array(Image.open(mask))
 
-    colormap = args.pop('colormap')
     colormask = args.pop('colormask')
     color = args.pop('color')
-    color_func = wc.colormap_color_func(colormap)
+    color_func = wc.colormap_color_func(args['colormap'])
     if colormask:
         image = np.array(Image.open(colormask))
         color_func = wc.ImageColorGenerator(image)
