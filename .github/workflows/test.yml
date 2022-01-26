@@ -10,6 +10,7 @@ jobs:
         pyver: ['3.6', '3.7', '3.8', '3.9']
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 4
     steps:
       - uses: actions/checkout@v2
       - name: Setting up Python
@@ -32,6 +33,7 @@ jobs:
         pyver: [cp36-cp36m, cp37-cp37m, cp38-cp38, cp39-cp39]
       fail-fast: false
     runs-on: ubuntu-latest
+    timeout-minutes: 4
     env:
       py: /opt/python/${{ matrix.pyver }}/bin/python
       img: quay.io/pypa/manylinux2014_aarch64
