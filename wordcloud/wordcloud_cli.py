@@ -25,8 +25,8 @@ import wordcloud as wc
 import numpy as np
 from PIL import Image
 
-from . import __version__
-
+from _version import get_versions
+__version__ = get_versions()['version']
 
 class FileType(object):
     """Factory for creating file object types.
